@@ -8,18 +8,20 @@ import android.view.View;
 public class FastSnackConfigs {
     private static int DURATION, BACKGROUND_COLOR, TEXT_COLOR, TEXT_GRAVITY, TEXT_SIZE,
             TEXT_ALIGNMENT, ACTION_TEXT_COLOR;
-    
+    private static String mBackgroundColor = "#00796B", mTextColor = "#FFFFFF",
+            mActionTextColor = "#FFC107";
+
     public FastSnackConfigs() {
     }
 
-    public static FastSnackConfigs buildDefaults(){
+    public static FastSnackConfigs buildDefaults() {
         DURATION = FastSnack.LENGTH_LONG;
-        BACKGROUND_COLOR = Color.parseColor("#00796B");
-        TEXT_COLOR = Color.parseColor("#FFFFFF");
+        BACKGROUND_COLOR = Color.parseColor(mBackgroundColor);
+        TEXT_COLOR = Color.parseColor(mTextColor);
         TEXT_GRAVITY = Gravity.CENTER;
         TEXT_SIZE = 12;
         TEXT_ALIGNMENT = View.TEXT_ALIGNMENT_CENTER;
-        ACTION_TEXT_COLOR = Color.parseColor("#FFC107");
+        ACTION_TEXT_COLOR = Color.parseColor(mActionTextColor);
         return new FastSnackConfigs();
     }
 
