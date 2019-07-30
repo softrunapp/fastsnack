@@ -88,6 +88,11 @@ public class FastSnack {
         return this;
     }
 
+    public FastSnack backgroundColor(@ColorInt int backgroundColor) {
+        this.mBackgroundColor = backgroundColor;
+        return this;
+    }
+
     public FastSnack textAlignment(int textAlignment) {
         this.mTextAlignment = textAlignment;
         return this;
