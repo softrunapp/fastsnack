@@ -72,7 +72,7 @@ most of them are self-explaining
             .show();
 ```
 ## Default valuse
-Add this snippet in the onCreate of your applicaton calss or first activity
+Add this snippet in the onCreate of your applicaton class or first activity
 
 ```java
     FastSnackConfigs.buildDefaults()
