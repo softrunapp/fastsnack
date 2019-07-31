@@ -2,6 +2,7 @@ package com.softunapps.fastsnack;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.annotation.ColorInt;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -17,6 +18,7 @@ public class FastSnack {
     private int mDuration;
     private int mBackgroundColor, mTextColor, mTextGravity, mTextSize, mTextAlignment,
             mActionTextColor;
+    private Typeface mTypeface;
     private View.OnClickListener mActionListener;
 
     public FastSnack() {
@@ -32,6 +34,7 @@ public class FastSnack {
         mTextGravity = fastSnackConfigs.getTextGravity();
         mTextAlignment = fastSnackConfigs.getTextAlignment();
         mTextSize = fastSnackConfigs.getTextSize();
+        mTypeface = fastSnackConfigs.getTypeFace();
     }
 
     private FastSnack setView(Context context, int viewId) {
@@ -98,6 +101,11 @@ public class FastSnack {
         return this;
     }
 
+    public FastSnack typeFace(Typeface typeface) {
+        this.mTypeface = typeface;
+        return this;
+    }
+
 
     public void show() {
         if (mContext == null) {
@@ -120,6 +128,7 @@ public class FastSnack {
         tv.setGravity(mTextGravity);
         tv.setTextSize(mTextSize);
         tv.setTextAlignment(mTextAlignment);
+        tv.setTypeface(mTypeface);
         if (mActionText != null) {
             snackbar.setAction(mActionText, mActionListener);
             snackbar.setActionTextColor(mActionTextColor);

@@ -1,6 +1,7 @@
 package com.softunapps.fastsnack;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.annotation.ColorInt;
 import android.view.Gravity;
 import android.view.View;
@@ -9,6 +10,7 @@ public class FastSnackConfigs {
     private static boolean SET_DEFAULTS = false;
     private static int DURATION, BACKGROUND_COLOR, TEXT_COLOR, TEXT_GRAVITY, TEXT_SIZE,
             TEXT_ALIGNMENT, ACTION_TEXT_COLOR;
+    private static Typeface TEXT_TYPE_FACE;
     private static String mBackgroundColor = "#00796B", mTextColor = "#FFFFFF",
             mActionTextColor = "#FFC107";
 
@@ -23,7 +25,7 @@ public class FastSnackConfigs {
         return new FastSnackConfigs();
     }
 
-    private static void initFirstDefaults(){
+    private static void initFirstDefaults() {
         DURATION = FastSnack.LENGTH_LONG;
         BACKGROUND_COLOR = Color.parseColor(mBackgroundColor);
         TEXT_COLOR = Color.parseColor(mTextColor);
@@ -69,6 +71,11 @@ public class FastSnackConfigs {
         return this;
     }
 
+    public FastSnackConfigs setTypeface(Typeface typeface) {
+        TEXT_TYPE_FACE = typeface;
+        return this;
+    }
+
     public int getDuration() {
         return DURATION;
     }
@@ -95,5 +102,9 @@ public class FastSnackConfigs {
 
     public int getActionTextColor() {
         return ACTION_TEXT_COLOR;
+    }
+
+    public Typeface getTypeFace() {
+        return TEXT_TYPE_FACE;
     }
 }
