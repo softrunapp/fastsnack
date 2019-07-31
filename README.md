@@ -12,7 +12,7 @@ Quickly show snakbar in the application and apply default values for it.
 
 
 
-# Gradle
+## Gradle
 
 Add it in your root build.gradle at the end of repositories:
 
@@ -31,7 +31,6 @@ Add the dependency:
 
 
 
-# How to use
 
 ## Usage
 Using FastSnack is really simple.
