@@ -6,15 +6,24 @@ import android.view.Gravity;
 import android.view.View;
 
 public class FastSnackConfigs {
+    private static boolean SET_DEFAULTS = false;
     private static int DURATION, BACKGROUND_COLOR, TEXT_COLOR, TEXT_GRAVITY, TEXT_SIZE,
             TEXT_ALIGNMENT, ACTION_TEXT_COLOR;
     private static String mBackgroundColor = "#00796B", mTextColor = "#FFFFFF",
             mActionTextColor = "#FFC107";
 
     public FastSnackConfigs() {
+        if (!SET_DEFAULTS) {
+            initFirstDefaults();
+        }
     }
 
     public static FastSnackConfigs buildDefaults() {
+        initFirstDefaults();
+        return new FastSnackConfigs();
+    }
+
+    private static void initFirstDefaults(){
         DURATION = FastSnack.LENGTH_LONG;
         BACKGROUND_COLOR = Color.parseColor(mBackgroundColor);
         TEXT_COLOR = Color.parseColor(mTextColor);
@@ -22,7 +31,7 @@ public class FastSnackConfigs {
         TEXT_SIZE = 12;
         TEXT_ALIGNMENT = View.TEXT_ALIGNMENT_CENTER;
         ACTION_TEXT_COLOR = Color.parseColor(mActionTextColor);
-        return new FastSnackConfigs();
+        SET_DEFAULTS = true;
     }
 
     public FastSnackConfigs setDuration(int duration) {
