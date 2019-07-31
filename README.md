@@ -7,11 +7,11 @@ Quickly show snakbar in the application and apply default values for it.
 
 ## Preview
 
-
+<div>
 <img src="screenshot_1.png" alt="preview" height="380">
 <img src="screenshot_2.png" alt="preview" height="380">
 <img src="screenshot_3.png" alt="preview" height="380">
-
+</dive>
 
 
 ## Gradle
