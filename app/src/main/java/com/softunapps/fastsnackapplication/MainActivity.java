@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FastSnack.on(findViewById(R.id.root)).message("Hello World!").backgroundColor(getColor(R.color.colorAccent)).show();
+//        FastSnack.on(findViewById(R.id.root)).message("Hello World!").backgroundColor(getColor(R.color.colorAccent)).show();
+        FastSnack.on(this).message("Hello World!").show();
 
     }
 }

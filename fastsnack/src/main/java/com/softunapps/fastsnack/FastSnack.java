@@ -48,6 +48,11 @@ public class FastSnack {
         return setContext(view);
     }
 
+    private FastSnack setView(Activity activity) {
+        this.mView = activity.findViewById(android.R.id.content);
+        return setContext(mView);
+    }
+
     private FastSnack setContext(View view) {
         if (this.mContext == null)
             this.mContext = view.getContext();
@@ -61,6 +66,10 @@ public class FastSnack {
 
     public static FastSnack on(Context context, int viewId) {
         return new FastSnack().setView(context, viewId);
+    }
+
+    public static FastSnack on(Activity activity) {
+        return new FastSnack().setView(activity);
     }
 
     public FastSnack message(String message) {
