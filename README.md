@@ -1,7 +1,7 @@
 # FastSnack
 [![](https://jitpack.io/v/softrunapp/fastsnack.svg)](https://jitpack.io/#softrunapp/fastsnack)
 
-Android FastSnack Library as snackbar
+Android FastSnack library as snackbar
 
 Quickly show snakbar in the application and apply default values for it.
 
